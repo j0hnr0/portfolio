@@ -1,10 +1,17 @@
-import { Inter } from 'next/font/google';
+import { Space_Mono, Syne } from 'next/font/google';
 import "./globals.css";
 
-const inter = Inter({
+const spaceMono = Space_Mono({
   subsets: ['latin'],
-  variable: '--font-inter',
-})
+  weight: ['400', '700'],
+  variable: '--font-mono',
+});
+
+const syne = Syne({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-sans',
+});
 
 export const metadata = {
   title: "Johnrovan's Portfolio",
@@ -15,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${syne.variable} ${spaceMono.variable} font-sans antialiased`}
       >
         {children}
       </body>
