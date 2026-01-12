@@ -1,6 +1,8 @@
-import NavBar from '@/app/(home)/_components/NavBar';
-import Hero from '@/app/(home)/_components/Hero';
-import Footer from '@/app/(home)/_components/Footer';
+import NavBar from '@/app/(home)/_components/sections/NavBar';
+import Hero from '@/app/(home)/_components/sections/Hero';
+import About from '@/app/(home)/_components/sections/About';
+import Footer from '@/app/(home)/_components/sections/Footer';
+import SectionHeader from '@/app/(home)/_components/ui/SectionHeader';
 
 export default function Home() {
   return (
@@ -12,33 +14,28 @@ export default function Home() {
         <Hero />
 
         {/* About Section - Bento Grid */}
-        <section id="about" className="min-h-screen py-20 px-6">
-          <div className="max-w-350 mx-auto">
-            <h2 className="text-3xl font-bold mb-8">About</h2>
-            <p className="text-text-secondary">Bento grid coming soon</p>
-          </div>
-        </section>
+        <About />
 
         {/* Projects Section */}
         <section id="work" className="min-h-screen py-20 px-6 bg-bg-card">
-          <div className="max-w-350 mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Projects</h2>
+          <div className="max-w-[1400px] mx-auto">
+            <SectionHeader title="Projects" />
             <p className="text-text-secondary">Project cards coming soon</p>
           </div>
         </section>
 
         {/* Education Section */}
         <section id="education" className="py-20 px-6">
-          <div className="max-w-350 mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Education</h2>
+          <div className="max-w-[1400px] mx-auto">
+            <SectionHeader title="Education" />
             <p className="text-text-secondary">Education content coming soon</p>
           </div>
         </section>
 
         {/* Contact Section */}
         <section id="contact" className="py-20 px-6 bg-bg-card">
-          <div className="max-w-350 mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Contact</h2>
+          <div className="max-w-[1400px] mx-auto">
+            <SectionHeader title="Contact" />
             <p className="text-text-secondary">Contact content coming soon</p>
           </div>
         </section>

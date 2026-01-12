@@ -30,14 +30,17 @@ This project uses the Next.js App Router (not Pages Router):
 ### Component Organization
 
 Components are stored in `app/(home)/_components/` directory (underscore prefix prevents Next.js from treating it as a route):
-- NavBar.js - Navigation component (implemented)
-- Hero.js - Hero section (implemented)
-- Footer.js - Footer component (implemented)
-- About.js - About section (placeholder)
-- Projects.js - Projects showcase (placeholder)
-- Experience.js - Experience section (placeholder)
-- Skills.js - Skills display (placeholder)
-- Contact.js - Contact section (placeholder)
+
+**Section Components** (`sections/`):
+- NavBar.js - Fixed navigation with logo and links (implemented with mix-blend-difference)
+- Hero.js - Hero section with large title, description, and inline stats (implemented)
+- About.js - Bento grid section with 6 cards (implemented)
+- Footer.js - Footer with copyright and status indicator (implemented)
+
+**UI Components** (`ui/`):
+- SectionHeader.js - Reusable section header with "// Title" and decorative line (implemented)
+- AboutMetricCard.js - Centered metric cards for About section (implemented)
+- StatCard.js - Legacy card component (no longer used, can be removed)
 
 The route group `(home)` allows organizing components without affecting the URL structure. The homepage remains at `/` while components are logically grouped.
 
@@ -84,9 +87,9 @@ import Hero from '@/app/(home)/_components/Hero';
 ## Project Context
 
 This is a portfolio website project from Frontend Mentor challenges. The design goal is a bento grid layout. The current implementation includes:
-- ✅ Layout structure with NavBar, Hero, and Footer
-- ✅ Hero section with branding and call-to-action
-- 🚧 About section (bento grid) - placeholder
+- ✅ Layout structure with NavBar, Hero, and Footer (refined with consistent section headers, proper container widths, smooth scroll)
+- ✅ Hero section with enhanced typography, inline stats, and optimized spacing
+- ✅ About section (bento grid) with 6 cards: large about card, 2 metric cards, skills card, experience card with dates, and CTA card
 - 🚧 Projects section - placeholder
 - 🚧 Education section - placeholder
 - 🚧 Contact section - placeholder
@@ -298,3 +301,7 @@ Build in this order:
 8. Basic hover effects
 9. Scroll animations (fade-in)
 10. Advanced effects (cursor, scanline, etc.)
+
+## Design Reference
+
+The file `design-reference.html` in the project root contains the complete design reference. This is a static HTML/CSS version of the target design. When building components, match the styling, spacing, and effects from this file as closely as possible. Translate the vanilla CSS to Tailwind classes.

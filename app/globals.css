@@ -11,6 +11,14 @@
   --color-accent-dim: rgba(0, 255, 136, 0.1);
   --color-accent-glow: rgba(0, 255, 136, 0.3);
   --color-border: rgba(255, 255, 255, 0.08);
+
+  --radius: 16px;
+  --radius-sm: 8px;
+  --radius-lg: 24px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

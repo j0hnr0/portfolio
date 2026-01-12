@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 export default function NavBar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
-      <nav className="flex items-center justify-between p-6 max-w-350 mx-auto">
+      <nav className="flex items-center justify-between p-6 max-w-[1400px] mx-auto">
         {/* Logo with pulsing dot */}
         <div className="flex items-center gap-2">
           <span className="relative flex h-2 w-2">
@@ -14,28 +16,28 @@ export default function NavBar() {
         {/* Navigation links - hidden on mobile */}
         <ul className="hidden md:flex items-center gap-8">
           <li>
-            <a
+            <Link
               href="#about"
-              className="text-white hover:text-accent transition-colors font-medium"
+              className="font-mono text-xs uppercase tracking-widest text-white hover:text-accent transition-colors"
             >
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#work"
-              className="text-white hover:text-accent transition-colors font-medium"
+              className="font-mono text-xs uppercase tracking-widest text-white hover:text-accent transition-colors"
             >
               Work
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#contact"
-              className="text-white hover:text-accent transition-colors font-medium"
+              className="font-mono text-xs uppercase tracking-widest text-white hover:text-accent transition-colors"
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
