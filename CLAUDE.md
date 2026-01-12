@@ -40,7 +40,8 @@ Components are stored in `app/(home)/_components/` directory (underscore prefix 
 **UI Components** (`ui/`):
 - SectionHeader.js - Reusable section header with "// Title" and decorative line (implemented)
 - AboutMetricCard.js - Centered metric cards for About section (implemented)
-- StatCard.js - Legacy card component (no longer used, can be removed)
+- Skill.js - Reusable skill pill component for tech stack display (implemented)
+- ExperienceCard.js - Timeline-style experience entry component with hover effect (implemented)
 
 The route group `(home)` allows organizing components without affecting the URL structure. The homepage remains at `/` while components are logically grouped.
 
