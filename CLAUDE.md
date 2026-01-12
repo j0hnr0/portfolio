@@ -20,24 +20,26 @@ This is a portfolio website built with Next.js 16 (App Router) using React 19, T
 This project uses the Next.js App Router (not Pages Router):
 
 - `app/` - Main application directory containing routes and layouts
-  - `page.js` - Home page route
   - `layout.js` - Root layout with font configuration and metadata
   - `globals.css` - Global styles with Tailwind CSS v4 theme tokens
   - `favicon.ico` - Site favicon
+  - `(home)/` - Route group for the home page (parentheses prevent it from affecting the URL)
+    - `page.js` - Home page route
+    - `_components/` - Components specific to the home page
 
 ### Component Organization
 
-Components are stored in `_components/` directory (underscore prefix prevents Next.js from treating it as a route):
-- NavBar.js - Navigation component
-- Hero.js - Hero section
-- About.js - About section
-- Projects.js - Projects showcase
-- Experience.js - Experience section
-- Skills.js - Skills display
-- Contact.js - Contact section
-- Footer.js - Footer component
+Components are stored in `app/(home)/_components/` directory (underscore prefix prevents Next.js from treating it as a route):
+- NavBar.js - Navigation component (implemented)
+- Hero.js - Hero section (implemented)
+- Footer.js - Footer component (implemented)
+- About.js - About section (placeholder)
+- Projects.js - Projects showcase (placeholder)
+- Experience.js - Experience section (placeholder)
+- Skills.js - Skills display (placeholder)
+- Contact.js - Contact section (placeholder)
 
-**Note:** All component files in `_components/` currently exist but are empty placeholders.
+The route group `(home)` allows organizing components without affecting the URL structure. The homepage remains at `/` while components are logically grouped.
 
 ### Styling System
 
@@ -75,12 +77,19 @@ The root body uses `font-sans` by default.
 
 The `jsconfig.json` configures the `@/*` alias to resolve to the project root, allowing imports like:
 ```javascript
-import Component from '@/_components/NavBar';
+import NavBar from '@/app/(home)/_components/NavBar';
+import Hero from '@/app/(home)/_components/Hero';
 ```
 
 ## Project Context
 
-This is a portfolio website project from Frontend Mentor challenges. The design goal is a bento grid layout (mentioned in app/page.js). The current state shows a placeholder page while the portfolio is under construction.
+This is a portfolio website project from Frontend Mentor challenges. The design goal is a bento grid layout. The current implementation includes:
+- ✅ Layout structure with NavBar, Hero, and Footer
+- ✅ Hero section with branding and call-to-action
+- 🚧 About section (bento grid) - placeholder
+- 🚧 Projects section - placeholder
+- 🚧 Education section - placeholder
+- 🚧 Contact section - placeholder
 
 ## Design Specification
 
