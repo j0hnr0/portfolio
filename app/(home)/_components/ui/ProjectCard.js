@@ -51,7 +51,7 @@ export default function ProjectCard({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="absolute top-4 right-4 w-10 h-10 bg-bg border border-border rounded-full flex items-center justify-center text-text opacity-0 translate-y-2.5 transition-all duration-300 z-[3] group-hover:opacity-100 group-hover:translate-y-0 hover:bg-accent hover:border-accent hover:text-bg"
+            className="absolute top-4 right-4 w-10 h-10 bg-bg border border-border rounded-full flex items-center justify-center text-text opacity-100 translate-y-0 md:opacity-0 md:translate-y-2.5 transition-all duration-300 z-[3] md:group-hover:opacity-100 md:group-hover:translate-y-0 hover:bg-accent hover:border-accent hover:text-bg"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
