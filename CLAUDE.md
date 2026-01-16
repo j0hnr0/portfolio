@@ -35,6 +35,7 @@ Components are stored in `app/(home)/_components/` directory (underscore prefix 
 - NavBar.js - Fixed navigation with logo and links (implemented with mix-blend-difference)
 - Hero.js - Hero section with large title, description, and inline stats (implemented)
 - About.js - Bento grid section with 6 cards (implemented)
+- Projects.js - Projects section with 2-column grid of project cards (implemented)
 - Footer.js - Footer with copyright and status indicator (implemented)
 
 **UI Components** (`ui/`):
@@ -42,6 +43,7 @@ Components are stored in `app/(home)/_components/` directory (underscore prefix 
 - AboutMetricCard.js - Centered metric cards for About section (implemented)
 - Skill.js - Reusable skill pill component for tech stack display (implemented)
 - ExperienceCard.js - Timeline-style experience entry component with hover effect (implemented)
+- ProjectCard.js - Project card with code preview, tags, metrics, and external link (implemented)
 
 The route group `(home)` allows organizing components without affecting the URL structure. The homepage remains at `/` while components are logically grouped.
 
@@ -91,7 +93,7 @@ This is a portfolio website project from Frontend Mentor challenges. The design 
 - ✅ Layout structure with NavBar, Hero, and Footer (refined with consistent section headers, proper container widths, smooth scroll)
 - ✅ Hero section with enhanced typography, inline stats, and optimized spacing
 - ✅ About section (bento grid) with 6 cards: large about card, 2 metric cards, skills card, experience card with dates, and CTA card
-- 🚧 Projects section - placeholder
+- ✅ Projects section with 3 project cards: Devlinks, Note Taking App, What to Cook
 - 🚧 Education section - placeholder
 - 🚧 Contact section - placeholder
 
