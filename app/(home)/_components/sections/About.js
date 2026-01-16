@@ -28,9 +28,9 @@ export default function About() {
               <p className="text-text-secondary leading-relaxed">
                 Frontend developer with experience building for global clients
                 across Dubai, LA, and the Philippines. I obsess over performance
-                metrics—improving Lighthouse scores from 40-50 to 90+—while
-                maintaining pixel-perfect implementations and 100% on-time
-                delivery.
+                metrics—improving Core Web Vitals and Lighthouse scores from
+                40-50 to 90+—while maintaining pixel-perfect implementations and
+                100% on-time delivery.
               </p>
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function About() {
           />
 
           {/* Card 3 - Pages Metric (Small) */}
-          <AboutMetricCard score="35+" title="Web Pages" desc="Delivered" />
+          <AboutMetricCard score="35+" title="Projects" desc="Delivered" />
 
           {/* Card 4 - Tech Stack (Wide 2x1) */}
           <div className="md:col-span-2 bg-bg-card border border-border rounded-2xl p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1 transition-all duration-[400ms]">
@@ -97,13 +97,28 @@ export default function About() {
             </h4>
             <div className="space-y-6">
               {/* Position 1 */}
-              <ExperienceCard title="Frontend Developer" company="Mutant Media FZC" location="Dubai, UAE (Remote)" date="Mar 2025 — Dec 2025" />
+              <ExperienceCard
+                title="Frontend Developer"
+                company="Mutant Media FZC"
+                location="Dubai, UAE (Remote)"
+                date="Mar 2025 — Dec 2025"
+              />
 
               {/* Position 2 */}
-              <ExperienceCard title="Frontend Developer" company="Chat Nexus" location=" Los Angeles, CA (Remote)" date="Dec 2024 — Jan 2025" />
+              <ExperienceCard
+                title="Frontend Developer"
+                company="Chat Nexus"
+                location=" Los Angeles, CA (Remote)"
+                date="Dec 2024 — Jan 2025"
+              />
 
               {/* Position 3 */}
-              <ExperienceCard title="Frontend Developer" company="Teknosprint Solutions" location="Cebu, Philippines" date="Nov 2023 — Nov 2024" />
+              <ExperienceCard
+                title="Frontend Developer"
+                company="Teknosprint Solutions"
+                location="Cebu, Philippines"
+                date="Nov 2023 — Nov 2024"
+              />
             </div>
           </div>
 

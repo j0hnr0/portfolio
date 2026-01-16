@@ -25,9 +25,8 @@ export default function Hero() {
 
         {/* Description */}
         <p className="text-text-secondary text-lg max-w-[520px] mb-12 leading-relaxed">
-          Frontend Developer with 2+ years delivering responsive web
-          applications across international remote teams. I optimize for
-          performance and ship on time, every time.
+          Frontend Developer with 2+ years across international remote teams in Dubai, LA, and the Philippines. 
+          I optimize Core Web Vitals and Lighthouse scores—and ship on time, every time.
         </p>
 
         {/* Stats Row */}
@@ -41,7 +40,7 @@ export default function Hero() {
           {/* Stat 2 - Pages Delivered */}
           <div>
             <div className="font-mono text-4xl font-bold text-accent leading-none">35+</div>
-            <div className="text-xs text-text-muted uppercase tracking-wider mt-2">Pages Delivered</div>
+            <div className="text-xs text-text-muted uppercase tracking-wider mt-2">Projects Delivered</div>
           </div>
 
           {/* Stat 3 - On-Time Rate */}
