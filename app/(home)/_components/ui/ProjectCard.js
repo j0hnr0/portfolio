@@ -9,7 +9,7 @@ export default function ProjectCard({
   status,
 }) {
   return (
-    <article className="group bg-bg-card border border-border rounded-lg overflow-hidden transition-all duration-[400ms] hover:border-accent hover:-translate-y-2">
+    <article className="group bg-bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-accent hover:-translate-y-1.5">
       {/* Image Area */}
       <div className="aspect-video bg-bg relative overflow-hidden">
         {/* Gradient Overlay */}
@@ -28,7 +28,7 @@ export default function ProjectCard({
         )}
 
         {/* Code Preview */}
-        <div className="absolute inset-8 bg-bg-card rounded-lg flex flex-col p-4 font-mono text-[0.625rem] text-text-muted overflow-hidden">
+        <div className="absolute inset-4 md:inset-6 lg:inset-8 bg-bg-card border border-border rounded-lg flex flex-col p-4 font-mono text-[0.625rem] text-text-muted overflow-hidden group-hover:border-accent/30 transition-all duration-300">
           {codeLines.map((line, index) => (
             <div key={index} className="flex gap-2 mb-1">
               {line.type === "keyword" && (
@@ -73,13 +73,13 @@ export default function ProjectCard({
       </div>
 
       {/* Content Area */}
-      <div className="p-6">
+      <div className="p-4 md:p-6">
         {/* Tags */}
         <div className="flex gap-2 mb-4 flex-wrap">
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="font-mono text-[0.625rem] px-3 py-1 bg-accent-dim text-accent rounded-full"
+              className="font-mono text-[0.625rem] px-3 py-1 bg-accent-dim text-accent rounded-full hover:opacity-80 transition-opacity duration-200"
             >
               {tag}
             </span>
@@ -87,7 +87,7 @@ export default function ProjectCard({
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        <h3 className="text-lg md:text-xl font-semibold mb-2">{title}</h3>
 
         {/* Description */}
         <p className="text-text-secondary text-[0.9375rem] leading-relaxed mb-4">

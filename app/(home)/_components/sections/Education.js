@@ -2,13 +2,13 @@ import SectionHeader from '@/app/(home)/_components/ui/SectionHeader';
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 px-6">
+    <section id="education" className="py-16 md:py-20 lg:py-24 px-4 sm:px-6">
       <div className="max-w-[1400px] mx-auto">
         <SectionHeader title="Education" />
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-6">
           {/* Education Card */}
-          <div className="bg-bg-card border border-border rounded-2xl p-8 flex flex-col justify-center hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1 transition-all duration-[400ms]">
+          <div className="bg-bg-card border border-border rounded-2xl p-6 md:p-8 flex flex-col justify-center hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300">
             <h3 className="font-mono text-xs text-text-muted uppercase tracking-widest mb-4">
               Degree
             </h3>
@@ -22,24 +22,24 @@ export default function Education() {
               2018 — 2023
             </div>
             <div className="flex flex-wrap gap-2 mt-4">
-              <span className="font-mono text-[0.625rem] px-3 py-1 bg-bg border border-border rounded">
+              <span className="font-mono text-[0.625rem] px-3 py-1 bg-bg border border-border rounded hover:border-accent/30 hover:text-accent transition-all duration-300 cursor-default">
                 Dean&apos;s Lister
               </span>
-              <span className="font-mono text-[0.625rem] px-3 py-1 bg-bg border border-border rounded">
+              <span className="font-mono text-[0.625rem] px-3 py-1 bg-bg border border-border rounded hover:border-accent/30 hover:text-accent transition-all duration-300 cursor-default">
                 ICpEP Region 7 Programming Competition
               </span>
             </div>
           </div>
 
           {/* Resume CTA Card */}
-          <div className="bg-gradient-to-br from-accent-dim to-transparent border border-border rounded-2xl p-8 flex flex-col justify-center items-center hover:border-accent/30 hover:-translate-y-1 transition-all duration-[400ms]">
+          <div className="bg-gradient-to-br from-accent-dim to-transparent border border-border rounded-2xl p-6 md:p-8 flex flex-col justify-center items-center hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300">
             <h3 className="font-mono text-xs text-text-muted uppercase tracking-widest mb-4">
               Download Resume
             </h3>
             <a
               href="/Resume.pdf"
               download
-              className="inline-flex items-center gap-2 bg-accent text-bg font-medium px-6 py-3 rounded-full hover:bg-accent/90 transition-colors"
+              className="inline-flex items-center gap-2 bg-accent text-bg font-medium px-6 py-3 rounded-full hover:bg-accent/90 hover:scale-105 transition-all duration-300"
             >
               Download PDF
               <svg

@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NavBar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
-      <nav className="flex items-center justify-between p-6 max-w-[1400px] mx-auto">
+      <nav className="flex items-center justify-between px-4 sm:px-6 py-6 max-w-[1400px] mx-auto">
         {/* Logo with pulsing dot */}
         <div className="flex items-center gap-2">
           <span className="relative flex h-2 w-2">
@@ -18,7 +18,7 @@ export default function NavBar() {
           <li>
             <Link
               href="#about"
-              className="font-mono text-xs uppercase tracking-widest text-white hover:text-accent transition-colors"
+              className="font-mono text-xs uppercase tracking-widest text-white hover:text-accent transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-accent hover:after:w-full after:transition-all after:duration-300"
             >
               About
             </Link>
@@ -26,7 +26,7 @@ export default function NavBar() {
           <li>
             <Link
               href="#work"
-              className="font-mono text-xs uppercase tracking-widest text-white hover:text-accent transition-colors"
+              className="font-mono text-xs uppercase tracking-widest text-white hover:text-accent transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-accent hover:after:w-full after:transition-all after:duration-300"
             >
               Work
             </Link>
@@ -34,7 +34,7 @@ export default function NavBar() {
           <li>
             <Link
               href="#contact"
-              className="font-mono text-xs uppercase tracking-widest text-white hover:text-accent transition-colors"
+              className="font-mono text-xs uppercase tracking-widest text-white hover:text-accent transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-accent hover:after:w-full after:transition-all after:duration-300"
             >
               Contact
             </Link>

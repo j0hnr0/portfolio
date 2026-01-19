@@ -60,10 +60,10 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="work" className="min-h-screen py-20 px-6 bg-bg-card">
+    <section id="work" className="min-h-screen py-16 md:py-20 lg:py-24 px-4 sm:px-6 bg-bg-card">
       <div className="max-w-[1400px] mx-auto">
         <SectionHeader title="Projects" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
           {projects.map((project) => (
             <ProjectCard key={project.number} {...project} />
           ))}

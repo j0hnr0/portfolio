@@ -6,16 +6,16 @@ import Skill from "../ui/Skill";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 px-6">
+    <section id="about" className="py-16 md:py-20 lg:py-24 px-4 sm:px-6">
       <div className="max-w-[1400px] mx-auto">
         <SectionHeader title="About" />
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {/* Card 1 - Large About Card (2x2) */}
-          <div className="md:col-span-2 md:row-span-2 bg-bg-card border border-border rounded-2xl p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1 transition-all duration-[400ms]">
+          <div className="md:col-span-2 md:row-span-2 bg-bg-card border border-border rounded-2xl p-6 md:p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300">
             <div className="flex flex-col h-full">
               {/* Avatar */}
-              <div className="w-20 h-20 rounded-full bg-bg border-2 border-accent flex items-center justify-center mb-6">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-bg border-2 border-accent flex items-center justify-center mb-6">
                 <span className="font-mono text-2xl font-bold text-accent">
                   JR
                 </span>
@@ -46,7 +46,7 @@ export default function About() {
           <AboutMetricCard score="35+" title="Projects" desc="Delivered" />
 
           {/* Card 4 - Tech Stack (Wide 2x1) */}
-          <div className="md:col-span-2 bg-bg-card border border-border rounded-2xl p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1 transition-all duration-[400ms]">
+          <div className="md:col-span-2 bg-bg-card border border-border rounded-2xl p-6 md:p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300">
             <h4 className="font-mono text-xs text-text-muted uppercase tracking-wider mb-6">
               Tech Stack
             </h4>
@@ -91,7 +91,7 @@ export default function About() {
           </div>
 
           {/* Card 5 - Experience (Tall 1x2) */}
-          <div className="md:row-span-2 bg-bg-card border border-border rounded-2xl p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1 transition-all duration-[400ms]">
+          <div className="md:row-span-2 bg-bg-card border border-border rounded-2xl p-6 md:p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300">
             <h4 className="font-mono text-xs text-text-muted uppercase tracking-wider mb-6">
               Experience
             </h4>
@@ -123,7 +123,7 @@ export default function About() {
           </div>
 
           {/* Card 6 - CTA Card (Small) */}
-          <div className="bg-linear-to-br from-accent-dim to-bg-card border border-accent/20 rounded-2xl p-8 hover:border-accent/40 hover:-translate-y-1 transition-all duration-[400ms]">
+          <div className="bg-linear-to-br from-accent-dim to-bg-card border border-accent/20 rounded-2xl p-6 md:p-8 hover:border-accent/40 hover:-translate-y-1.5 transition-all duration-300">
             <div className="flex flex-col h-full justify-between">
               <h4 className="text-lg font-semibold mb-4">
                 Let&apos;s work together
