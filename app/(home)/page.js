@@ -3,8 +3,8 @@ import Hero from '@/app/(home)/_components/sections/Hero';
 import About from '@/app/(home)/_components/sections/About';
 import Projects from '@/app/(home)/_components/sections/Projects';
 import Education from '@/app/(home)/_components/sections/Education';
+import Contact from '@/app/(home)/_components/sections/Contact';
 import Footer from '@/app/(home)/_components/sections/Footer';
-import SectionHeader from '@/app/(home)/_components/ui/SectionHeader';
 
 export default function Home() {
   return (
@@ -25,12 +25,7 @@ export default function Home() {
         <Education />
 
         {/* Contact Section */}
-        <section id="contact" className="py-20 px-6 bg-bg-card">
-          <div className="max-w-[1400px] mx-auto">
-            <SectionHeader title="Contact" />
-            <p className="text-text-secondary">Contact content coming soon</p>
-          </div>
-        </section>
+        <Contact />
       </main>
 
       <Footer />
