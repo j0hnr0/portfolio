@@ -46,6 +46,7 @@ Components are stored in `app/(home)/_components/` directory (underscore prefix 
 - Skill.js - Reusable skill pill component for tech stack display (implemented)
 - ExperienceCard.js - Timeline-style experience entry component with hover effect (implemented)
 - ProjectCard.js - Project card with code preview, tags, metrics, and external link (implemented)
+- FadeInSection.js - Intersection Observer wrapper for scroll-triggered fade-in animations (implemented)
 
 The route group `(home)` allows organizing components without affecting the URL structure. The homepage remains at `/` while components are logically grouped.
 
@@ -304,7 +305,7 @@ Build in this order:
 6. ✅ Education and Contact sections
 7. ✅ Responsive styling (sm/md/lg/xl breakpoints, responsive padding/gaps)
 8. ✅ Basic hover effects (standardized transitions, card lift, border highlights)
-9. Scroll animations (fade-in)
+9. ✅ Scroll animations (fade-in)
 10. Advanced effects (cursor, scanline, etc.)
 
 ## Design Reference

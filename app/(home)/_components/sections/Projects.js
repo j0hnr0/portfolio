@@ -1,5 +1,8 @@
+'use client';
+
 import SectionHeader from "../ui/SectionHeader";
 import ProjectCard from "../ui/ProjectCard";
+import FadeInSection from "../ui/FadeInSection";
 
 const projects = [
   {
@@ -62,10 +65,14 @@ export default function Projects() {
   return (
     <section id="work" className="min-h-screen py-16 md:py-20 lg:py-24 px-4 sm:px-6 bg-bg-card">
       <div className="max-w-[1400px] mx-auto">
-        <SectionHeader title="Projects" />
+        <FadeInSection>
+          <SectionHeader title="Projects" />
+        </FadeInSection>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-          {projects.map((project) => (
-            <ProjectCard key={project.number} {...project} />
+          {projects.map((project, index) => (
+            <FadeInSection key={project.number} delay={index * 100}>
+              <ProjectCard {...project} />
+            </FadeInSection>
           ))}
         </div>
       </div>

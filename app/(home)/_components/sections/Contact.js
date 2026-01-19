@@ -1,3 +1,7 @@
+'use client';
+
+import FadeInSection from '../ui/FadeInSection';
+
 export default function Contact() {
   const contactLinks = [
     {
@@ -63,34 +67,40 @@ export default function Contact() {
     <section id="contact" className="py-24 md:py-32 lg:py-40 px-4 sm:px-6">
       <div className="max-w-[1400px] mx-auto text-center">
         {/* Heading */}
-        <h2
-          className="font-sans font-extrabold leading-tight mb-6"
-          style={{ fontSize: 'clamp(2.5rem, 8vw, 6rem)' }}
-        >
-          Let&apos;s build something{' '}
-          <span className="text-accent">great</span>
-        </h2>
+        <FadeInSection>
+          <h2
+            className="font-sans font-extrabold leading-tight mb-6"
+            style={{ fontSize: 'clamp(2.5rem, 8vw, 6rem)' }}
+          >
+            Let&apos;s build something{' '}
+            <span className="text-accent">great</span>
+          </h2>
+        </FadeInSection>
 
         {/* Subtitle */}
-        <p className="text-text-secondary text-lg max-w-[500px] mx-auto mb-12">
-          I&apos;m always open to discussing new projects, opportunities, or just having a chat about tech.
-        </p>
+        <FadeInSection delay={100}>
+          <p className="text-text-secondary text-lg max-w-[500px] mx-auto mb-12">
+            I&apos;m always open to discussing new projects, opportunities, or just having a chat about tech.
+          </p>
+        </FadeInSection>
 
         {/* Contact Links */}
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
-          {contactLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.external ? '_blank' : undefined}
-              rel={link.external ? 'noopener noreferrer' : undefined}
-              className="bg-bg-card border border-border rounded-lg px-4 sm:px-6 py-3 sm:py-4 font-mono text-sm flex items-center gap-2 hover:bg-bg-card-hover hover:border-accent hover:text-accent hover:-translate-y-1 transition-all duration-300"
-            >
-              {link.icon}
-              {link.label}
-            </a>
-          ))}
-        </div>
+        <FadeInSection delay={200}>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
+            {contactLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.external ? '_blank' : undefined}
+                rel={link.external ? 'noopener noreferrer' : undefined}
+                className="bg-bg-card border border-border rounded-lg px-4 sm:px-6 py-3 sm:py-4 font-mono text-sm flex items-center gap-2 hover:bg-bg-card-hover hover:border-accent hover:text-accent hover:-translate-y-1 transition-all duration-300"
+              >
+                {link.icon}
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </FadeInSection>
       </div>
     </section>
   );
