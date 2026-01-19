@@ -36,6 +36,7 @@ Components are stored in `app/(home)/_components/` directory (underscore prefix 
 - Hero.js - Hero section with large title, description, and inline stats (implemented)
 - About.js - Bento grid section with 6 cards (implemented)
 - Projects.js - Projects section with 2-column grid of project cards (implemented)
+- Education.js - Education section with degree card and resume download CTA (implemented)
 - Footer.js - Footer with copyright and status indicator (implemented)
 
 **UI Components** (`ui/`):
@@ -94,7 +95,7 @@ This is a portfolio website project from Frontend Mentor challenges. The design 
 - ✅ Hero section with enhanced typography, inline stats, and optimized spacing
 - ✅ About section (bento grid) with 6 cards: large about card, 2 metric cards, skills card, experience card with dates, and CTA card
 - ✅ Projects section with 3 project cards: Devlinks, Note Taking App, What to Cook
-- 🚧 Education section - placeholder
+- ✅ Education section with degree info card and resume download CTA
 - 🚧 Contact section - placeholder
 
 ## Design Specification

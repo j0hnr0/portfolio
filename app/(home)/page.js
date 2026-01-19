@@ -2,6 +2,7 @@ import NavBar from '@/app/(home)/_components/sections/NavBar';
 import Hero from '@/app/(home)/_components/sections/Hero';
 import About from '@/app/(home)/_components/sections/About';
 import Projects from '@/app/(home)/_components/sections/Projects';
+import Education from '@/app/(home)/_components/sections/Education';
 import Footer from '@/app/(home)/_components/sections/Footer';
 import SectionHeader from '@/app/(home)/_components/ui/SectionHeader';
 
@@ -21,12 +22,7 @@ export default function Home() {
         <Projects />
 
         {/* Education Section */}
-        <section id="education" className="py-20 px-6">
-          <div className="max-w-[1400px] mx-auto">
-            <SectionHeader title="Education" />
-            <p className="text-text-secondary">Education content coming soon</p>
-          </div>
-        </section>
+        <Education />
 
         {/* Contact Section */}
         <section id="contact" className="py-20 px-6 bg-bg-card">
