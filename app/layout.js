@@ -1,5 +1,6 @@
 import { Space_Mono, Syne } from 'next/font/google';
 import "./globals.css";
+import EffectsProvider from './(home)/_components/effects/EffectsProvider';
 
 const spaceMono = Space_Mono({
   subsets: ['latin'],
@@ -24,7 +25,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${syne.variable} ${spaceMono.variable} font-sans antialiased`}
       >
-        {children}
+        <EffectsProvider>
+          {children}
+        </EffectsProvider>
       </body>
     </html>
   );

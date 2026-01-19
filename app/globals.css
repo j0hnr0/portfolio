@@ -39,3 +39,12 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+@keyframes scanline {
+  0% {
+    top: -2px;
+  }
+  100% {
+    top: 100vh;
+  }
+}

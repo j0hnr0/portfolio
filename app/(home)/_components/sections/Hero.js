@@ -1,6 +1,8 @@
 'use client';
 
 import FadeInSection from '../ui/FadeInSection';
+import CountUp from '../ui/CountUp';
+import TextReveal from '../ui/TextReveal';
 
 export default function Hero() {
   return (
@@ -14,25 +16,23 @@ export default function Hero() {
         </FadeInSection>
 
         {/* Hero Title */}
-        <FadeInSection delay={100}>
-          <h1
-            className="font-bold mb-8"
-            style={{
-              fontSize: "clamp(2.5rem, 10vw, 7rem)",
-              lineHeight: "1.0",
-              letterSpacing: "-0.04em",
-              fontWeight: "800",
-            }}
-          >
-            <span className="block">Building fast,</span>
-            <span className="block">
-              <span className="text-accent">pixel-perfect</span> interfaces
-            </span>
-          </h1>
-        </FadeInSection>
+        <h1
+          className="font-bold mb-8"
+          style={{
+            fontSize: "clamp(2.5rem, 10vw, 7rem)",
+            lineHeight: "1.0",
+            letterSpacing: "-0.04em",
+            fontWeight: "800",
+          }}
+        >
+          <TextReveal delay={100}>Building fast,</TextReveal>
+          <TextReveal delay={200}>
+            <span className="text-accent">pixel-perfect</span> interfaces
+          </TextReveal>
+        </h1>
 
         {/* Description */}
-        <FadeInSection delay={200}>
+        <FadeInSection delay={300}>
           <p className="text-text-secondary text-lg max-w-[520px] mb-12 leading-relaxed">
             Frontend Developer with 2+ years across international remote teams in Dubai, LA, and the Philippines.
             I optimize Core Web Vitals and Lighthouse scores—and ship on time, every time.
@@ -40,23 +40,29 @@ export default function Hero() {
         </FadeInSection>
 
         {/* Stats Row */}
-        <FadeInSection delay={300}>
+        <FadeInSection delay={400}>
           <div className="flex flex-col sm:flex-row flex-wrap gap-6 md:gap-8 lg:gap-16">
             {/* Stat 1 - Lighthouse Score */}
             <div className="group cursor-default">
-              <div className="font-mono text-4xl font-bold text-accent leading-none group-hover:text-accent/80 transition-colors duration-300">90+</div>
+              <div className="font-mono text-4xl font-bold text-accent leading-none group-hover:text-accent/80 transition-colors duration-300">
+                <CountUp end={90} suffix="+" />
+              </div>
               <div className="text-xs text-text-muted uppercase tracking-wider mt-2 group-hover:text-text-secondary transition-colors duration-300">Lighthouse Score</div>
             </div>
 
             {/* Stat 2 - Pages Delivered */}
             <div className="group cursor-default">
-              <div className="font-mono text-4xl font-bold text-accent leading-none group-hover:text-accent/80 transition-colors duration-300">35+</div>
+              <div className="font-mono text-4xl font-bold text-accent leading-none group-hover:text-accent/80 transition-colors duration-300">
+                <CountUp end={35} suffix="+" />
+              </div>
               <div className="text-xs text-text-muted uppercase tracking-wider mt-2 group-hover:text-text-secondary transition-colors duration-300">Projects Delivered</div>
             </div>
 
             {/* Stat 3 - On-Time Rate */}
             <div className="group cursor-default">
-              <div className="font-mono text-4xl font-bold text-accent leading-none group-hover:text-accent/80 transition-colors duration-300">100%</div>
+              <div className="font-mono text-4xl font-bold text-accent leading-none group-hover:text-accent/80 transition-colors duration-300">
+                <CountUp end={100} suffix="%" />
+              </div>
               <div className="text-xs text-text-muted uppercase tracking-wider mt-2 group-hover:text-text-secondary transition-colors duration-300">On-Time Rate</div>
             </div>
           </div>

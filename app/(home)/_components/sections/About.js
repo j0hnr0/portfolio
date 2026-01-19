@@ -4,6 +4,7 @@ import Link from "next/link";
 import AboutMetricCard from "../ui/AboutMetricCard";
 import ExperienceCard from "../ui/ExperienceCard";
 import FadeInSection from "../ui/FadeInSection";
+import MouseGlowCard from "../ui/MouseGlowCard";
 import SectionHeader from "../ui/SectionHeader";
 import Skill from "../ui/Skill";
 
@@ -18,7 +19,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {/* Card 1 - Large About Card (2x2) */}
           <FadeInSection delay={0} className="md:col-span-2 md:row-span-2">
-            <div className="h-full bg-bg-card border border-border rounded-2xl p-6 md:p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300">
+            <MouseGlowCard className="bento-card h-full bg-bg-card border border-border rounded-2xl p-6 md:p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300">
               <div className="flex flex-col h-full">
                 {/* Avatar */}
                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-bg border-2 border-accent flex items-center justify-center mb-6">
@@ -39,7 +40,7 @@ export default function About() {
                   100% on-time delivery.
                 </p>
               </div>
-            </div>
+            </MouseGlowCard>
           </FadeInSection>
 
           {/* Card 2 - Lighthouse Metric (Small) */}
@@ -58,7 +59,7 @@ export default function About() {
 
           {/* Card 4 - Tech Stack (Wide 2x1) */}
           <FadeInSection delay={300} className="md:col-span-2">
-            <div className="h-full bg-bg-card border border-border rounded-2xl p-6 md:p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300">
+            <MouseGlowCard className="bento-card h-full bg-bg-card border border-border rounded-2xl p-6 md:p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300">
               <h4 className="font-mono text-xs text-text-muted uppercase tracking-wider mb-6">
                 Tech Stack
               </h4>
@@ -100,12 +101,12 @@ export default function About() {
                   Git
                 </Skill>
               </div>
-            </div>
+            </MouseGlowCard>
           </FadeInSection>
 
           {/* Card 5 - Experience (Tall 1x2) */}
           <FadeInSection delay={400} className="md:row-span-2">
-            <div className="h-full bg-bg-card border border-border rounded-2xl p-6 md:p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300">
+            <MouseGlowCard className="bento-card h-full bg-bg-card border border-border rounded-2xl p-6 md:p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300">
               <h4 className="font-mono text-xs text-text-muted uppercase tracking-wider mb-6">
                 Experience
               </h4>
@@ -134,12 +135,12 @@ export default function About() {
                   date="Nov 2023 — Nov 2024"
                 />
               </div>
-            </div>
+            </MouseGlowCard>
           </FadeInSection>
 
           {/* Card 6 - CTA Card (Small) */}
           <FadeInSection delay={500}>
-            <div className="h-full bg-linear-to-br from-accent-dim to-bg-card border border-accent/20 rounded-2xl p-6 md:p-8 hover:border-accent/40 hover:-translate-y-1.5 transition-all duration-300">
+            <MouseGlowCard className="bento-card h-full bg-linear-to-br from-accent-dim to-bg-card border border-accent/20 rounded-2xl p-6 md:p-8 hover:border-accent/40 hover:-translate-y-1.5 transition-all duration-300">
               <div className="flex flex-col h-full justify-between">
                 <h4 className="text-lg font-semibold mb-4">
                   Let&apos;s work together
@@ -165,7 +166,7 @@ export default function About() {
                   </svg>
                 </Link>
               </div>
-            </div>
+            </MouseGlowCard>
           </FadeInSection>
         </div>
       </div>
