@@ -47,6 +47,16 @@ Components are stored in `app/(home)/_components/` directory (underscore prefix 
 - ExperienceCard.js - Timeline-style experience entry component with hover effect (implemented)
 - ProjectCard.js - Project card with code preview, tags, metrics, and external link (implemented)
 - FadeInSection.js - Intersection Observer wrapper for scroll-triggered fade-in animations (implemented)
+- CountUp.js - Animated number counter triggered on scroll with IntersectionObserver (implemented)
+- MouseGlowCard.js - Card wrapper with mouse-tracking radial glow effect (implemented)
+- TextReveal.js - Text reveal animation with slide-up effect for hero text (implemented)
+
+**Effects Components** (`effects/`):
+- PageLoader.js - Full-page loading screen with progress bar animation (2.5s duration, implemented)
+- CustomCursor.js - Desktop-only custom cursor with ring that scales on interactive element hover (implemented)
+- Scanline.js - Subtle animated scanline moving down the screen (8s loop, implemented)
+- NoiseOverlay.js - Static SVG noise texture overlay at 2% opacity (implemented)
+- EffectsProvider.js - Wrapper component combining all effects for easy inclusion in layout (implemented)
 
 The route group `(home)` allows organizing components without affecting the URL structure. The homepage remains at `/` while components are logically grouped.
 
@@ -99,6 +109,10 @@ This is a portfolio website project from Frontend Mentor challenges. The design 
 - ✅ Projects section with 3 project cards: Devlinks, Note Taking App, What to Cook
 - ✅ Education section with degree info card and resume download CTA
 - ✅ Contact section with large heading, subtitle, and 4 contact link buttons (Email, Phone, GitHub, LinkedIn)
+- ✅ Advanced effects (page loader, custom cursor, scanline, noise overlay)
+- ✅ Count-up animations on stats
+- ✅ Text reveal animations on hero
+- ✅ Mouse-tracking glow on cards
 
 ## Design Specification
 
@@ -240,22 +254,22 @@ Two-column grid:
 
 ### Animations & Effects
 
-**Phase 1 (Core - Build First):**
-- Smooth scroll for anchor links
-- Hover effects on cards (lift + border color change)
-- Hover effects on buttons and links
-- Basic fade-in on scroll for sections
+**Phase 1 (Core - Complete):**
+- ✅ Smooth scroll for anchor links
+- ✅ Hover effects on cards (lift + border color change)
+- ✅ Hover effects on buttons and links
+- ✅ Basic fade-in on scroll for sections
 
-**Phase 2 (Polish - Add Later):**
-- Page loader with progress bar
-- Custom cursor (ring + dot) on desktop only
-- Cursor grows on hovering interactive elements
-- Scanline effect (subtle horizontal line that moves down screen)
-- Noise texture overlay (very subtle, ~2% opacity)
-- Mouse-tracking gradient glow on bento cards
-- Count-up animation for stats when scrolled into view
-- Text reveal animation on hero (words sliding up)
-- Staggered reveal for bento cards
+**Phase 2 (Polish - Complete):**
+- ✅ Page loader with progress bar
+- ✅ Custom cursor (ring + dot) on desktop only
+- ✅ Cursor grows on hovering interactive elements
+- ✅ Scanline effect (subtle horizontal line that moves down screen)
+- ✅ Noise texture overlay (very subtle, ~2% opacity)
+- ✅ Mouse-tracking gradient glow on bento cards
+- ✅ Count-up animation for stats when scrolled into view
+- ✅ Text reveal animation on hero (words sliding up)
+- ✅ Staggered reveal for bento cards
 
 ### Responsive Behavior
 
@@ -306,7 +320,7 @@ Build in this order:
 7. ✅ Responsive styling (sm/md/lg/xl breakpoints, responsive padding/gaps)
 8. ✅ Basic hover effects (standardized transitions, card lift, border highlights)
 9. ✅ Scroll animations (fade-in)
-10. Advanced effects (cursor, scanline, etc.)
+10. ✅ Advanced effects (cursor, scanline, page loader, noise overlay, count-up, text reveal, mouse glow)
 
 ## Design Reference
 

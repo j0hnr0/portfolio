@@ -9,7 +9,7 @@ export default function Hero() {
     <section id="hero" className="min-h-screen pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-16 lg:pb-20 px-4 sm:px-6 flex items-center">
       <div className="max-w-[1400px] mx-auto w-full">
         {/* Label */}
-        <FadeInSection delay={0}>
+        <FadeInSection delay={50}>
           <p className="font-mono text-accent uppercase tracking-widest text-sm mb-6">
             Frontend Developer — Cebu, Philippines
           </p>
@@ -25,8 +25,8 @@ export default function Hero() {
             fontWeight: "800",
           }}
         >
-          <TextReveal delay={100}>Building fast,</TextReveal>
-          <TextReveal delay={200}>
+          <TextReveal delay={2300}>Building fast,</TextReveal>
+          <TextReveal delay={2400}>
             <span className="text-accent">pixel-perfect</span> interfaces
           </TextReveal>
         </h1>
@@ -40,12 +40,12 @@ export default function Hero() {
         </FadeInSection>
 
         {/* Stats Row */}
-        <FadeInSection delay={400}>
+        <FadeInSection delay={100}>
           <div className="flex flex-col sm:flex-row flex-wrap gap-6 md:gap-8 lg:gap-16">
             {/* Stat 1 - Lighthouse Score */}
             <div className="group cursor-default">
               <div className="font-mono text-4xl font-bold text-accent leading-none group-hover:text-accent/80 transition-colors duration-300">
-                <CountUp end={90} suffix="+" />
+                <CountUp end={90} suffix="+" delay={200} />
               </div>
               <div className="text-xs text-text-muted uppercase tracking-wider mt-2 group-hover:text-text-secondary transition-colors duration-300">Lighthouse Score</div>
             </div>
@@ -53,7 +53,7 @@ export default function Hero() {
             {/* Stat 2 - Pages Delivered */}
             <div className="group cursor-default">
               <div className="font-mono text-4xl font-bold text-accent leading-none group-hover:text-accent/80 transition-colors duration-300">
-                <CountUp end={35} suffix="+" />
+                <CountUp end={35} suffix="+" delay={200} />
               </div>
               <div className="text-xs text-text-muted uppercase tracking-wider mt-2 group-hover:text-text-secondary transition-colors duration-300">Projects Delivered</div>
             </div>
@@ -61,7 +61,7 @@ export default function Hero() {
             {/* Stat 3 - On-Time Rate */}
             <div className="group cursor-default">
               <div className="font-mono text-4xl font-bold text-accent leading-none group-hover:text-accent/80 transition-colors duration-300">
-                <CountUp end={100} suffix="%" />
+                <CountUp end={100} suffix="%" delay={200} />
               </div>
               <div className="text-xs text-text-muted uppercase tracking-wider mt-2 group-hover:text-text-secondary transition-colors duration-300">On-Time Rate</div>
             </div>

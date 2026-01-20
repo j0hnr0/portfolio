@@ -2,7 +2,7 @@
 
 import { useRef, useCallback } from 'react';
 
-export default function MouseGlowCard({ children, className = '' }) {
+export default function MouseGlowCard({ children, className = '', contentClassName = '' }) {
   const cardRef = useRef(null);
 
   const handleMouseMove = useCallback((e) => {
@@ -29,18 +29,18 @@ export default function MouseGlowCard({ children, className = '' }) {
       ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`relative overflow-hidden ${className}`}
+      className={`group relative overflow-hidden ${className}`}
       style={{ '--mouse-x': '50%', '--mouse-y': '50%' }}
     >
       {/* Glow effect */}
       <div
-        className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-[inherit]"
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-[inherit]"
         style={{
           background: 'radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), var(--color-accent-dim), transparent 40%)',
         }}
       />
       {/* Card content */}
-      <div className="relative z-10 h-full">
+      <div className={`relative z-10 h-full ${contentClassName}`}>
         {children}
       </div>
     </div>

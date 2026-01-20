@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 export default function PageLoader() {
   const [isLoading, setIsLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
+  const [isHiding, setIsHiding] = useState(false);
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -13,22 +13,20 @@ export default function PageLoader() {
       return () => clearTimeout(timeout);
     }
 
-    const duration = 1500;
-    const startTime = performance.now();
+    // Wait for animation to complete (2s) then start fade out
+    const hideTimeout = setTimeout(() => {
+      setIsHiding(true);
+    }, 2000);
 
-    const animateProgress = (currentTime) => {
-      const elapsed = currentTime - startTime;
-      const newProgress = Math.min((elapsed / duration) * 100, 100);
-      setProgress(newProgress);
+    // Remove loader after fade out (500ms)
+    const removeTimeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
 
-      if (newProgress < 100) {
-        requestAnimationFrame(animateProgress);
-      } else {
-        setTimeout(() => setIsLoading(false), 300);
-      }
+    return () => {
+      clearTimeout(hideTimeout);
+      clearTimeout(removeTimeout);
     };
-
-    requestAnimationFrame(animateProgress);
   }, []);
 
   if (!isLoading) return null;
@@ -36,7 +34,7 @@ export default function PageLoader() {
   return (
     <div
       className={`fixed inset-0 z-[10000] bg-bg flex flex-col items-center justify-center gap-8 transition-opacity duration-500 ${
-        progress >= 100 ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        isHiding ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >
       <span className="font-mono text-sm text-accent tracking-[0.2em]">
@@ -44,10 +42,23 @@ export default function PageLoader() {
       </span>
       <div className="w-[200px] h-0.5 bg-border relative overflow-hidden">
         <div
-          className="absolute left-0 top-0 h-full bg-accent transition-all duration-100"
-          style={{ width: `${progress}%` }}
+          className="absolute left-0 top-0 h-full bg-accent animate-loader-progress"
         />
       </div>
+
+      <style jsx>{`
+        @keyframes loaderProgress {
+          from {
+            width: 0%;
+          }
+          to {
+            width: 100%;
+          }
+        }
+        .animate-loader-progress {
+          animation: loaderProgress 2s ease forwards;
+        }
+      `}</style>
     </div>
   );
 }

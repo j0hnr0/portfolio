@@ -2,6 +2,7 @@
 
 import SectionHeader from '@/app/(home)/_components/ui/SectionHeader';
 import FadeInSection from '@/app/(home)/_components/ui/FadeInSection';
+import MouseGlowCard from '@/app/(home)/_components/ui/MouseGlowCard';
 
 export default function Education() {
   return (
@@ -14,7 +15,7 @@ export default function Education() {
         <div className="grid md:grid-cols-2 gap-4 md:gap-6">
           {/* Education Card */}
           <FadeInSection delay={0}>
-            <div className="h-full bg-bg-card border border-border rounded-2xl p-6 md:p-8 flex flex-col justify-center hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300">
+            <MouseGlowCard className="h-full bg-bg-card border border-border rounded-2xl p-6 md:p-8 hover:bg-bg-card-hover hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300" contentClassName="flex flex-col justify-center">
               <h3 className="font-mono text-xs text-text-muted uppercase tracking-widest mb-4">
                 Degree
               </h3>
@@ -35,19 +36,19 @@ export default function Education() {
                   ICpEP Region 7 Programming Competition
                 </span>
               </div>
-            </div>
+            </MouseGlowCard>
           </FadeInSection>
 
           {/* Resume CTA Card */}
           <FadeInSection delay={100}>
-            <div className="h-full bg-gradient-to-br from-accent-dim to-transparent border border-border rounded-2xl p-6 md:p-8 flex flex-col justify-center items-center hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300">
-              <h3 className="font-mono text-xs text-text-muted uppercase tracking-widest mb-4">
+            <MouseGlowCard className="h-full bg-gradient-to-br from-accent-dim to-transparent border border-border rounded-2xl p-6 md:p-8 hover:border-accent/30 hover:-translate-y-1.5 transition-all duration-300" contentClassName="flex flex-col justify-center items-center">
+              <h3 className="text-2xl font-semibold mb-4">
                 Download Resume
               </h3>
               <a
                 href="/Resume.pdf"
                 download
-                className="inline-flex items-center gap-2 bg-accent text-bg font-medium px-6 py-3 rounded-full hover:bg-accent/90 hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-accent text-bg font-mono text-sm font-bold px-8 py-4 rounded-lg hover:scale-105 hover:shadow-[0_0_30px_var(--color-accent-glow)] transition-all duration-300"
               >
                 Download PDF
                 <svg
@@ -66,7 +67,7 @@ export default function Education() {
                   />
                 </svg>
               </a>
-            </div>
+            </MouseGlowCard>
           </FadeInSection>
         </div>
       </div>

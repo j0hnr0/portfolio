@@ -140,14 +140,13 @@ export default function About() {
 
           {/* Card 6 - CTA Card (Small) */}
           <FadeInSection delay={500}>
-            <MouseGlowCard className="bento-card h-full bg-linear-to-br from-accent-dim to-bg-card border border-accent/20 rounded-2xl p-6 md:p-8 hover:border-accent/40 hover:-translate-y-1.5 transition-all duration-300">
-              <div className="flex flex-col h-full justify-between">
-                <h4 className="text-lg font-semibold mb-4">
+            <MouseGlowCard className="bento-card h-full bg-linear-to-br from-accent-dim to-bg-card border border-accent/20 rounded-2xl p-6 md:p-8 hover:border-accent/40 hover:-translate-y-1.5 transition-all duration-300" contentClassName="flex flex-col h-full justify-center items-center text-center">
+                <h3 className="text-2xl font-semibold mb-4">
                   Let&apos;s work together
-                </h4>
+                </h3>
                 <Link
                   href="#contact"
-                  className="bg-accent text-bg px-6 py-3 rounded-lg font-mono text-sm font-bold hover:bg-accent/90 hover:scale-105 transition-all flex items-center justify-center gap-2 group"
+                  className="inline-flex items-center gap-2 bg-accent text-bg font-mono text-sm font-bold px-8 py-4 rounded-lg hover:scale-105 hover:shadow-[0_0_30px_var(--color-accent-glow)] transition-all duration-300 group"
                 >
                   Get in touch
                   <svg
@@ -165,7 +164,6 @@ export default function About() {
                     />
                   </svg>
                 </Link>
-              </div>
             </MouseGlowCard>
           </FadeInSection>
         </div>
