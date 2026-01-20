@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
           <p className="text-text-secondary text-sm hover:text-text transition-colors duration-300 cursor-default">
-            © 2025 Rovan Cabucos. Crafted with precision.
+            © 2026 John Rovan. Crafted with precision.
           </p>
 
           {/* Status indicator */}

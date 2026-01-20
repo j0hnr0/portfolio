@@ -15,8 +15,37 @@ const syne = Syne({
 });
 
 export const metadata = {
-  title: "Johnrovan's Portfolio",
-  description: "Made with love",
+  metadataBase: new URL('https://johnrovan.com'),
+  title: 'John Rovan | Frontend Developer',
+  description: 'Frontend Developer with 2+ years building fast, pixel-perfect web applications. Specializing in React and Next.js. Based in Cebu, Philippines.',
+  keywords: [
+    'Frontend Developer',
+    'React Developer',
+    'Next.js Developer',
+    'Web Developer',
+    'JavaScript',
+    'Cebu Philippines',
+    'John Rovan',
+  ],
+  authors: [{ name: 'John Rovan' }],
+  creator: 'John Rovan',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://johnrovan.com',
+    siteName: 'John Rovan Portfolio',
+    title: 'John Rovan | Frontend Developer',
+    description: 'Frontend Developer with 2+ years building fast, pixel-perfect web applications. Specializing in React and Next.js.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'John Rovan | Frontend Developer',
+    description: 'Frontend Developer with 2+ years building fast, pixel-perfect web applications. Specializing in React and Next.js.',
+  },
 };
 
 export default function RootLayout({ children }) {
